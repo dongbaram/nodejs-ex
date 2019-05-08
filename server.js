@@ -97,18 +97,19 @@ app.get('/', function (req, res) {
 });
 
 app.get('/pagecount', function (req, res) {
-  // try to initialize the db on every request if it's not already
-  // initialized.
-  if (!db) {
-    initDb(function(err){});
-  }
-  if (db) {
-    db.collection('counts').count(function(err, count ){
-      res.send('{ pageCount: ' + count + '}');
+    //console.log(req.body);      //client 에게  받은 파라미터
+    console.log("download filename:"+req.query.filename);
+    //res.send("key1:"+req.query.key1);
+    /*
+    fs.readFile('./uploads/'+req.query.key1,function(req,res){
+        res.writeHead(200,{"content-Type":"text/html"});
+        res.end(data);
     });
-  } else {
-    res.send('{ pageCount: -1 }');
-  }
+    */
+    //res.download('D:/Python/uploads/'+req.query.filename);
+    res.send("download filename:"+req.query.filename);
+    //console.log("download filename:"+req.query.filename);
+    //res.download('./uploads/'+req.query.filename);
 });
 
 // error handling
