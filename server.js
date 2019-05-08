@@ -170,6 +170,14 @@ app.post('/fileUpload',function(req,res) {
     }); 
 
 });
+
+
+//파일 다운로드 test
+app.get('/filedownload',function(req,res) {
+    console.log("download filename:"+req.query.filename);
+    res.download('./uploads/'+req.query.filename);
+});
+ 
 //ocr--end---------------------------------------------------------------------------------
 
 initDb(function(err){
