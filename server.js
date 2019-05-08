@@ -118,7 +118,7 @@ app.use(function(err, req, res, next){
 });
 
 //ocr-----------------------------------------------------------------------------------
-app.post('/fileUpload',function(req,res) {
+app.post('/dscocr',function(req,res) {
     var storage =   multer.diskStorage({
         
         destination: function (req, file, cb) {                 // 파일 업로드 경로 지정
