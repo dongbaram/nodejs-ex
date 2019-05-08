@@ -128,7 +128,8 @@ app.post('/fileUpload',function(req,res) {
         filename: function (req, file, cb) {                    //파일 업로드 처리
           console.log("file.originalname:"+file.originalname);
  
-          upfilename = Date.now()+"_"+file.originalname         //날짜 + 시간 + 원래 파일명
+          //upfilename = Date.now()+"_"+file.originalname;         //날짜 + 시간 + 원래 파일명
+          upfilename = file.originalname;         //날짜 + 시간 + 원래 파일명
           cb(null, upfilename );
           console.log("upfilename:"+upfilename);
 
