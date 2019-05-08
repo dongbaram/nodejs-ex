@@ -122,7 +122,7 @@ app.use(function(err, req, res, next){
 app.get('/filedownload',function(req,res) {
     //console.log(req.body);      //client 에게  받은 파라미터
     console.log("download filename:"+req.query.filename);
-    //res.send("key1:"+req.query.key1);
+    //res.send("key1:"+req.query.key1);  // // 
     /*
     fs.readFile('./uploads/'+req.query.key1,function(req,res){
         res.writeHead(200,{"content-Type":"text/html"});
