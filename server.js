@@ -136,7 +136,7 @@ app.post('/dscocr',function(req,res) {
         }
       }); 
 
-    var upload = multer({ storage : storage}).single('uploadFile'); //client 에서 호출명
+    var upload = multer({ storage : storage}).single('ocrfile'); //client 에서 호출명
 
     console.log("app post /fileUpload"); 
 
